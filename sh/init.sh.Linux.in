@@ -81,6 +81,7 @@ elif ! mountinfo -q /run; then
 		eerror "Can't continue."
 		exit 1
 	fi
+	eend $rc
 fi
 
 [ -x /sbin/restorecon ] && /sbin/restorecon -rF /run
